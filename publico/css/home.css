@@ -1,0 +1,223 @@
+@import 'nav.css';
+@import 'footer.css';
+
+
+.hero-section{
+    width: 100%;
+   /* height: calc(100vh - 120px); más abajo la imagen*/
+   height: 400px;
+    background:linear-gradient(180deg, rgba(0, 0, 0, 0) 41.15%, rgba(0, 0, 0, 0.8) 100%), url("../img/Hongo.jpg") center / cover no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.hero-content{
+    width: 100%; 
+    height: auto;
+    padding: 32px 10%;
+}
+
+.title_promocional{
+    color: #FFF;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 61px;
+    text-align: left;
+    text-transform: capitalize;
+}
+.sub-heading{
+    color: #FFF;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: left;
+    text-transform: capitalize;
+
+}
+
+.productos{
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.productos-categorias{
+    padding: 0 10vw;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+.producto-container{
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.producto-container::-webkit-scrollbar{
+    display: none;
+
+}
+
+.producto-card{
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin-right: 40px;
+
+}
+
+.producto-imagen{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.producto-thumb{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.discount-tag{
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    color: #ff7d7d;
+    right: 10px;
+    top: 10px;
+    text-transform: capitalize;
+}
+
+.card-btn{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 90%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.producto-card:hover .card-btn{
+    opacity: 1;
+}
+
+.card-btn:hover{
+    background: #efefef;
+}
+
+.producto-info{
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+}
+
+.producto-brand{
+    text-transform:capitalize;
+    overflow: hidden;
+    opacity: 0.5;
+}
+
+.producto-short-des{
+   width: 100%;
+   height: 20px;
+   line-height: 20px;
+   text-transform: capitalize;
+   overflow: hidden;
+   opacity: 0.5;
+   margin: 5px 0;
+}
+
+.price{
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.actual-price{
+    margin-left: 20px;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.pre-btn, .nxt-btn{
+    border: none;
+    width: 10vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg,rgba(255,255,255,0) 0%, #fff 100%);
+    cursor: pointer;
+    z-index: 8;
+}
+
+.pre-btn{
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.nxt-btn{
+    right: 0;
+}
+
+.pre-btn img, .nxt-btn img{
+    opacity: 0.2;
+}
+
+.pre-btn:hover img, .nxt-btn:hover img{
+    opacity: 1;
+}
+
+/*Colección*/
+.coleccion-container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.coleccion{
+    position: relative;
+}
+
+.coleccion img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.coleccion p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    text-transform: capitalize;
+
+}
+
+.coleccion:nth-child(3){
+    grid-column: span 2;
+
+}
+
